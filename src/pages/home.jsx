@@ -52,9 +52,7 @@ const HomePage = ({
       {!loading && !error && (
         <main className="grid">
           {filteredCoins.length > 0 ? (
-            filteredCoins.map((coin) => (
-              <CoingCard key={coin.key} coin={coin} />
-            ))
+            filteredCoins.map((coin) => <CoingCard key={coin.id} coin={coin} />)
           ) : (
             <p>No matching coins found</p>
           )}
