@@ -25,8 +25,8 @@ ChartJs.register(
 const API_URL = import.meta.env.VITE_COIN_API_URL;
 
 const CoinChart = ({ coinId }) => {
-  const [chartData, setChartData] = useState();
-  const [loading, setLoading] = useState();
+  const [chartData, setChartData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchPrices = async () => {
@@ -56,7 +56,6 @@ const CoinChart = ({ coinId }) => {
       });
       setLoading(false);
     };
-    console.log(data);
     fetchPrices();
   }, [coinId]);
 
