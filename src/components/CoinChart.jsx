@@ -59,7 +59,7 @@ const CoinChart = ({ coinId }) => {
     fetchPrices();
   }, [coinId]);
 
-  if (loading) return <p>Loading Chart...</p>;
+  if (loading) return <p>Loading Chart....</p>;
 
   return (
     <div style={{ marginTop: '30px' }}>
